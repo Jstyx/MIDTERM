@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="/static/midterm.css">
+    </head>
+    <body>
+        <div class="containerHome">
+            <h2 style="color: white;">Home</h2><br>
+            <a href="/login">
+                <button type="button" class="btn"><span>Back?</span></button></a>
+        </div>
+        {% if logSuc %}
+        <div class="containerStatus">
+            <p>{{logSuc}}</p>
+        </div>
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="/static/midterm.css">
+    </head>
+    <body>
+        <div class="container2">
+            <h2 style="color: white;">Register</h2><br>
+            <form action="/register2" method="POST">
+                <label style="color: white;" for="fname">First Name:</label><br>
+                <input type="text" class="input" id="fname" name="fname" placeholder="enter your first name here"><br><br>
+                <label style="color: white;" for="lname">Last Name:</label><br>
+                <input type="text" class="input" id="lname" name="lname" placeholder="enter your last name here"><br><br>
+                <label style="color: white;" for="user">Username:</label><br>
+                <input type="text" class="input" id="user" name="user" placeholder="enter your username here"><br><br>
+                <label style="color: white;" for="pass">Password:</label><br>
+                <input type="password" class="input" id="pass" name="pass" placeholder="enter your password here"><br><br><br>
+                <button type="submit" class = "btn"><span>Register</span></button>
+            </form>
+            <a href="/login">
+                <button type="button" class="btn"><span>Back?</span></button></a>
+        </div>
+        {% if integError or regSuc or existing or missing %}
+        <div class="containerStatus">
+            <p>{{integError}}</p>
+            <p>{{regSuc}}</p>
+            <p>{{missing}}</p>
+            <p>{{existing}}</p>
+        </div>
+        {% endif %}
+    </body>
+</html>

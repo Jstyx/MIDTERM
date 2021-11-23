@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="/static/midterm.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2 style="color: white;">Login</h2><br>
+            <form action="/login2" method="POST">
+                <label style="color: white;" for="orig">Username:</label><br>
+                <input type="text" class="input" id="user" name="user" placeholder="enter your username here"><br><br>
+                <label style="color: white;" for="dest">Password:</label><br>
+                <input type="text" class="input" id="pass" name="pass" placeholder="enter your password here"><br><br><br>
+                <button type="submit" class = "btn"><span>Login</span></button>
+            </form>
+            <a href="/register">
+                <button type="button" class="btn"><span>Register</span></button></a>
+        </div>
+        {% if logSuc or invalCred or invalMet %}
+        <div class="containerStatus">
+            <p>{{logSuc}}</p>
+            <p>{{invalCred}}</p>
+            <p>{{invalMet}}</p>
+        </div>
+        {% endif %}
+    </body>
+</html>
